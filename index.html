@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0e1538;
+        }
+        .box{
+            width: 300px;
+            height: 400px;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .box::before{
+            position: absolute;
+            content: "";
+            width: 150px;
+            height: 140%;
+            background: linear-gradient(#00ccff,#d400d4);
+            animation:  uz 4s infinite linear ;
+
+        }
+        @keyframes uz {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .box::after{
+            position: absolute;
+            content: "";
+            inset: 4px;
+            border-radius: 20px;
+            background: #0e1538;
+        }
+        h2{
+            position: relative;
+            z-index: 10;
+            color: white;
+            font-size: 10rem;
+            font-family: 'Fredoka', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>
+            07
+        </h2>
+    </div>
+</body>
+</html>
